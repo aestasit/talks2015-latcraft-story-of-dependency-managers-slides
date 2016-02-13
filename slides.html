@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Story of dependency managers</title>
+    <meta charset="utf-8">
+    <style>
+
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+
+      .title {
+        color: white;
+      }
+
+      .fullscreen {
+        padding: 0;
+      }
+
+      .shade {
+        padding: 0;
+      }
+
+      .shade h1, .shade h2, .shade h3 {
+        background-color:rgba(0,0,0,0.7);
+        color: white;
+        width: 100%;
+        line-height: 2em;
+      }
+
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle, title, shade
+background-image: url(images/AIRDROP_DELIVERY.jpg)
+# Story of package managers
+
+---
+class: center, middle, title, shade
+background-image: url(images/UNICORN.jpg)
+# I'm a DevOps guy!
+
+---
+class: center, middle, title, shade             
+background-image: url(images/AIRMAIL_PACKAGE.jpg)
+# Stories
+
+---
+
+class: center, middle, title, shade
+background-image: url(images/RUSSIA_PACKAGE_MANAGER.jpg)
+# Pain points
+
+---
+
+# Ecosystems
+
+- Operating systems: 
+    - RedHat
+    - Debian
+    - MacOS
+    - Windows
+    - ...
+- Programming languages
+    - PHP
+    - Perl
+    - Java
+    - Ruby
+    - Objective C
+    - Dart
+    - Go 
+    - Rust
+    - Javascript
+    - ...
+- Platforms/frameworks
+
+---
+
+# What are the standard problems?
+
+- No dependency manager tooling
+- No defined package format
+- No transitive dependencies support
+- No sticky versions
+- No build tool integration
+- No central artifact repository
+- Broken system state
+- Version conflicts
+- Flakey versions
+
+---
+
+class: center, middle, title, shade
+background-image: url(images/BIKE_DELIVERY.jpg)
+# Dependency managers are 2nd class citizens
+
+???
+
+It's easy to install dependless package. Dependencies make things complicated. Very complicated. Extremely complicated.
+
+---
+
+# History repeats
+
+- Not every OS has/starts with an official package manager
+- Package/dependency managers are not created by language designers
+- Vendors do not really care about automation/dependencies
+- Often shared library hosting is done by 3rd party
+
+???
+
+Some programming langauges that exist for last 2 decades got proper package manager only in this decade.
+Why do we need to wait for a dependency management tool? 
+Ecosystem without dependency manager leave negative history trail for that ecosystem. 
+Knowing the majority of the ecosystem quirks is called EXPERIENCE!
+Working with dependencies for experienced developer usually happens smoothly, becuase he knows what to avoid. 
+But for every new comer it is usually a nightmare and a first thing to complain about.
+
+---
+
+class: center, middle, title, shade
+
+# Who knows what YUM stands for?
+
+---
+
+class: center, middle, title, shade
+background-image: url(images/YELLOW_DOG.png)
+# Yellow Dog Updater, Modified
+
+---
+
+class: center, middle, title, shade
+background-image: url(images/SMOKING_YODA.jpg)
+# What have you been smoking?
+
+---
+
+class: center, middle, title, shade
+background-image: url(images/BORING.jpg)
+# APT = Advanced Packaging Tool
+
+---
+
+# OpenSUSE SAT 
+
+![suse](images/OPEN_SUSE_SAT.png)
+
+---
+
+# OpenSUSE SAT 
+
+> Since the solver treats every package alike, these rules have some major and sometimes unexpected implications. 
+> A broken dependency might result in removal of lots of packages - the resulting system is still consistent but probably highly unusable.
+
+---
+
+# MacOS 
+
+![homebrew](images/HOMEBREW.png)
+
+---
+
+# Windows
+
+![windows](images/CHOCO.png)
+
+---
+
+class: center, middle, title, shade
+background-image: url(images/UNICEF_PACKAGES.jpg)
+# Programming language ecosystems
+
+---
+
+# Java
+
+### Maven
+### Ivy
+### Gradle
+
+---
+
+# Objective C
+
+![ios](images/COCOAPODS.png)
+
+---
+
+# Javascript
+
+![javascript](images/JAVASCRIPT_MANAGERS.png)
+
+---
+
+# PHP Composer
+
+![composer](images/PHP_COMPOSER.png)
+
+---
+
+# PHP Pear
+
+![pear](images/PHP_PEAR.png)
+
+---
+
+# Perl
+
+### CPAN
+### PPM
+### Carton
+### many, many, many other tools
+
+---
+
+# Python
+
+![python](images/PYTHON_TOOLING.png)
+
+---
+
+# Python YOLK
+
+![python](images/PYTHON_YOLK.png)
+
+---
+
+# Ruby
+
+![ruby](images/RUBY_BUNDLER.png)
+
+---
+
+# Rust
+
+![ruby](images/RUST_CARGO.png)
+
+---
+
+class: center, middle, title, shade
+background-image: url(images/WAREHOUSE.jpg)
+# Heterogenous environments
+
+???
+
+We live in a connected world. WE DEPEND ON EACH OTHER RESULTS! Everybody wants to work in isolation with minimal dependencies, but ends up with integrating a lot of external libraries
+You may don't like PHP or Java or Ruby or Python or Perl or nodejs, but chances are that you'll have to install each one of them on a single server at some point.
+
+---
+
+class: center, middle, title, shade
+background-image: url(images/HORROR_STORY.jpg)
+# Nightmare
+
+---
+
+class: center, middle, title, shade
+background-image: url(images/WAREHOUSE_2.jpg)
+# Metatool?
+
+
+---
+
+class: center, middle, title, shade
+background-image: url(images/WAREHOUSE_2.jpg)
+# Configuration management tools
+
+---
+
+# Configuration management tools
+
+### Puppet
+### Chef
+### Ansible
+
+---
+
+# Dependency management for dependency managers 
+
+### Puppet's module tool
+### Chef's knife
+### Ansible's galaxy
+
+---
+
+class: center, middle, title, shade
+background-image: url(images/RAILROAD_CONTAINER_MANAGEMENT.jpg)
+# Docker
+
+---
+
+class: center, middle, title, shade
+background-image: url(images/CONTAINER_DELIVERY.jpg)
+# Docker Compose
+
+---
+
+class: center, middle, title, shade
+background-image: url(images/CONTAINER_DELIVERY.jpg)
+# When entering the Ops, be prepared to fight!
+
+---
+
+class: center, middle, title, shade
+background-image: url(images/HORROR_STORY.jpg)
+# You are forced to live in dependency HELL!
+
+---
+
+class: center, middle, title, shade
+background-image: url(images/HORROR_STORY.jpg)
+### People make money on managing your dependencies!
+
+---
+
+class: center, middle, title, shade
+background-image: url(images/BIKE_DELIVERY.jpg)
+# Why IT is so BAD at managing dependencies?
+
+---
+
+class: center, middle, title, shade
+background-image: url(images/BIKE_DELIVERY.jpg)
+# Situation will not change any soon!
+
+---
+
+# Any TRICKS?
+
+- **Test** (with freshly fetched dependencies)
+- **Release** (consistent versions)
+- **Isolate** (project and system package trees)
+- **Cache** (localy and in artifact repositories)
+- **Keep** (dependency lists in version control)
+- **Stick** (to known versions)
+
+---
+
+# Takeaways
+
+### Vendors should be more responsible 
+### Incomplete dependency managers cause a lot of extra work
+### Community needs YOU!
+
+---
+
+class: center, middle, title, shade
+# Thanks!
+
+---
+
+class: center, middle, title, shade
+# Questions?
+
+
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create({ratio: "4:3"});
+    </script>
+  </body>
+</html>
