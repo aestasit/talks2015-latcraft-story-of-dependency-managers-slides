@@ -1,7 +1,7 @@
 
-# The story of package managers
+# Story of dependency managers
 
-Slide deck of presentation "**The story of package managers**" given at **Latcraft | DevOps** (Riga), *2015* by *Andrey Adamovich*.
+Slide deck of presentation "**Story of dependency managers**" given at **Latcraft | Ops** (Riga), *2015* by *Andrey Adamovich*.
 
 Presentation description:
 
